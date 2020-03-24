@@ -8,10 +8,47 @@
   </head>
   <body>
     <div id="app">
+
       <div class="field">
         <label class="label"> Name </label>
         <input v-model="name" type="text" class="input" placeholder="Text input"/>   
       </div>
+    
+      <div class="field">
+        <label class="label"> Subject </label>
+        <div class="select">
+          <select v-model="subjetc">
+            <option disabled value=""> Select dropdown </option>
+            <option> Engineering </option>
+            <option> Computer Science </option>
+            <option> Biology </option>
+            <option> Other... </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="checkbox">
+          <input v-model="termsAndConditions" type="checkbox" />
+          I agree to the terms and conditions
+        </label>
+      </div>
+
+      <div class="field">
+        <label class="radio">
+          <input v-model="yesOrNo" name="yesOrNo" type="radio" value="Yes"/>
+          Yes
+        </label>
+        <label class="radio">
+          <input v-model="yesOrNo" name="yesOrNo" type="radio" value="No"/>
+          No
+        </label>
+      </div>
+
+      <div class="field">
+        <button class="button is-info" v-on:click="submit"> Submit </button>
+      </div>
+
     </div>
   </body>
 </html>
