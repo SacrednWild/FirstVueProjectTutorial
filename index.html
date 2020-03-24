@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <meta charset="utf-8"></meta>
+    <meta charset="utf-8"></meta> <!-- Risolve il "problema del formato" del browser -->
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
@@ -13,7 +13,7 @@
 
       <div class="field">
         <label class="label"> Name </label>
-        <input v-model="name" type="text" class="input" placeholder="Text input"/>   
+        <input v-model.trim="name" type="text" class="input" placeholder="Text input"/>   
       </div>
     
       <div class="field">
