@@ -1,0 +1,1 @@
+This example is about Lifecycle Hook of a Vue-APP.
