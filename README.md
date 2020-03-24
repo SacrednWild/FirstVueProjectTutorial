@@ -1,1 +1,1 @@
-I'm trying to use Git again for this project.
+This is the first project used to follow lessons from "30 Days of Vue - Fullstack.io".
