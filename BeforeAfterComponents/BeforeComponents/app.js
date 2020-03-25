@@ -24,4 +24,9 @@ const tweets =
     tweet: 'Beauty in the struggle, ugliness in the success.',
     likes: 10
   }   
-]
+];
+
+const app = new Vue( {
+  el:'#app',
+  data: { tweets }
+} );
