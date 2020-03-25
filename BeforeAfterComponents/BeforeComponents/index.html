@@ -9,6 +9,41 @@
     <script src="./app.js" defer></script>
   </head>
   <body>
-
+    <div id="app">
+      <div class="tweet">
+        <div class="box">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img v-bind:src="tweets[0].img">
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong> {{ tweets[0].name }} </strong>
+                  <small> {{ tweets[0].handle }} </small>
+                  <br>
+                  {{ tweets[0].tweet }}
+                </p>
+              </div>
+              <div class="level-left">
+                <a class="level-item">
+                  <span class="icon is-small">
+                    <i class="fas fa-heart"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="control has-icons.left">
+          <input class="input is-small" placeholder="Tweet your reply..."/>
+          <span class="icon is-small is-left">
+            <i class="fas fa-evelope"></i>
+          </span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
