@@ -19,7 +19,7 @@ const tweets =
   {
     id: 3,
     name: 'Xin',
-    handle: '@jokerjames',
+    handle: '@xeroxin',
     img: 'images/manga.jpg',
     tweet: 'Beauty in the struggle, ugliness in the success.',
     likes: 10
