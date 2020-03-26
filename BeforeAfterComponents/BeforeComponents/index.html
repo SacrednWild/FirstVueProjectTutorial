@@ -10,7 +10,11 @@
   </head>
   <body>
     <div id="app">
-      <div v-for="tweet in tweets" v-bind:key="tweet.id" class="tweet">
+
+    <tweet-component v-for="tweet in tweets" v-bind:key="tweet.id"></tweet-component> 
+    <!-- 
+
+    <div v-for="tweet in tweets" v-bind:key="tweet.id" class="tweet">
         <div class="box">
           <article class="media">
             <div class="media-left">
@@ -45,6 +49,7 @@
           </span>
         </div>
       </div>
+    -->
     </div>
   </body>
 </html>
