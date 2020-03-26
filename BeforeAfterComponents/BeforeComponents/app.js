@@ -27,7 +27,12 @@ const tweets =
 ];
 
 Vue.component('tweet-component', {
-  props: ['tweet'],
+  props: {
+    tweet: {
+      type: Object,
+      required: true
+    }
+  },
   template: `
     <div class="tweet">
       <div class="box">
