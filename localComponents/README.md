@@ -1,0 +1,1 @@
+This example is used to understand local components.
