@@ -1,4 +1,17 @@
+body {
+  background-color: aquamarine;
+}
+
 .tweet {
   width: 500px;
   margin: 0 auto;
+  padding-top: 15px;
+}
+
+.control {
+  bottom: 20px;
+}
+
+article {
+  padding: 10px auto;
 }
