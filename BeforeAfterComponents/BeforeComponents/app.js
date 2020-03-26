@@ -39,12 +39,17 @@ Vue.component( 'tweet-content', {
         </p>
       </div>
       <div class="level-left">
-        <a class="level-item" v-on:click="$emit( 'add', tweet ) ">
+        <a class="level-item">
           <span class="icon is-small">
             <i class="fas fa-heart"></i>
           </span>
           <span class="likes">
-          {{ tweet.likes }}
+            {{ tweet.likes }}
+          </span>
+        </a>
+        <a class="level-item" v-on:click="$emit( 'add', tweet )">
+          <span class="icon is-small">
+            <i class="fas fa-plus"></i>
           </span>
         </a>
       </div>
@@ -82,5 +87,19 @@ Vue.component('tweet-component', {
 
 const app = new Vue( {
   el:'#app',
-  data: { tweets }
+  data: { tweets },
+  methods: {
+    addTweetMessage( tweet ) {
+      let newTweet = {};
+      let lastTweetObjectID = this.tweets[this.tweets.length - 1].id;
+
+      //Shallow copy tweet object
+      newTweet = Object.assign( {}, tweet );
+
+      //Set tweet id to be one greater than last tweet
+      newTweet.id = lastTweetObjectID + 1;
+
+      this.tweets.push( newTweet );
+    }
+  }
 } );
