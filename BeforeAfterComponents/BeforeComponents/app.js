@@ -27,22 +27,23 @@ const tweets =
 ];
 
 Vue.component('tweet-component', {
+  props: ['tweet'],
   template: `
     <div class="tweet">
       <div class="box">
         <article class="media">
           <div class="media-left">
             <figure class="image is-64x64">
-              <img src="images/cry.jpg">
+              <img v-bind:src="tweet.img">
             </figure>
           </div>
           <div class="media-content">
             <div class="content">
               <p>
-                <strong>James</strong>
-                <small>@jokerjames</small>
+                <strong>{{ tweet.name }}</strong>
+                <small>{{ tweet.handle }}</small>
                 <br>
-                If you don't succeed, dust yourself off...
+                {{ tweet.tweet }}
               </p>
             </div>
             <div class="level-left">
@@ -51,7 +52,7 @@ Vue.component('tweet-component', {
                   <i class="fas fa-heart"></i>
                 </span>
                 <span class="likes">
-                  10
+                  {{ tweet.likes }}
                 </span>
               </a>
             </div>
