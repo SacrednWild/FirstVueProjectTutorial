@@ -39,7 +39,7 @@ Vue.component( 'tweet-content', {
         </p>
       </div>
       <div class="level-left">
-        <a class="level-item">
+        <a class="level-item" v-on:click="$emit( 'add', tweet ) ">
           <span class="icon is-small">
             <i class="fas fa-heart"></i>
           </span>
@@ -67,7 +67,7 @@ Vue.component('tweet-component', {
               <img v-bind:src="tweet.img">
             </figure>
           </div>
-          <tweet-content v-bind:tweet="tweet"></tweet-content>
+          <tweet-content v-bind:tweet="tweet" v-on:add="$emit( 'add', $event )"></tweet-content>
         </article>
       </div>
       <div class="control has-icons-left">
