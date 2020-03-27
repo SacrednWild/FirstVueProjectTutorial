@@ -1,6 +1,6 @@
 const counterOne = {
   template: `
-  <button class="component-button" v-bind:click="counter++">
+  <button class="component-button" v-on:click="counter++">
     You clicked me {{ counter }} times.
   </button> `,
   data() {
@@ -12,7 +12,7 @@ const counterOne = {
 
 const counterTwo = {
   template: `
-  <button class="component-button" v-bind:click="counter++">
+  <button class="component-button" v-on:click="counter++">
     You clicked me {{ counter }} times.
   </button> `,
   data() {
@@ -24,7 +24,7 @@ const counterTwo = {
 
 const counterThree = {
   template: `
-  <button class="component-button" v-bind:click="counter++">
+  <button class="component-button" v-on:click="counter++">
     You clicked me {{ counter }} times
   </button> `,
   data() {
